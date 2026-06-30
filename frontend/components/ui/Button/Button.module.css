@@ -1,14 +1,88 @@
-.btn {
+.button {
+  padding: 12px 24px;
+
+  font-weight: 400;
+  font-size: 14px;
+
+  border: 2px solid transparent;
+  outline: transparent;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border 0.3s ease,
+    transform 0.2s ease;
+  cursor: pointer;
+}
+.screw {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 44px;
+  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: 44px;
 }
 
-.btn svg {
+.normal {
+  border-radius: 6px;
+}
+
+.primary {
+  color: #fafafa;
+  background: #8baa36;
+}
+
+.secondary {
+  color: #fafafa;
+  background: #8baa36;
+}
+
+.empty {
+  border: 2px solid #fafafa;
+  background: transparent;
+  color: #fafafa;
+}
+
+.button svg {
   stroke: currentColor;
   fill: none;
 }
 
-.btn:disabled,
-.btn.disabled {
-  opacity: 0.3;
+.button:disabled,
+.button.disabled {
+  opacity: 0.6;
   cursor: not-allowed;
   pointer-events: none;
+}
+
+.primary:active,
+.empty:active {
+  transform: scale(0.95);
+}
+
+.primary:focus-visible {
+  background: transparent;
+  color: #8baa36;
+  border: 2px solid #8baa36;
+}
+.empty:focus-visible {
+  color: #8baa36;
+  border: 2px solid #8baa36;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 22px 44px;
+    font-size: 16px;
+  }
+}
+
+@media (hover: hover) {
+  .primary:hover {
+    background: transparent;
+    color: #8baa36;
+    border: 2px solid #8baa36;
+  }
+  .empty:hover {
+    color: #8baa36;
+    border: 2px solid #8baa36;
+  }
 }

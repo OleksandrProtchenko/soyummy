@@ -1,0 +1,68 @@
+.welcomeWrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.welcomeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcomeContent {
+  max-width: 305px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcomeLogoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+  width: 54px;
+  height: 54px;
+  position: relative;
+}
+
+.welcomeTitle {
+  margin-bottom: 14px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+}
+.welcomeDescription {
+  margin-bottom: 44px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+}
+.welcomeButtonWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .welcomeContent {
+    max-width: 608px;
+  }
+  .welcomeLogoWrapper {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 44px;
+  }
+  .welcomeTitle {
+    font-size: 28px;
+  }
+  .welcomeDescription {
+    font-size: 18px;
+    line-height: 1.33;
+    margin-bottom: 40px;
+  }
+}
