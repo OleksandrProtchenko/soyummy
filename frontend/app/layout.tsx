@@ -21,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable}`}>
-      <body>{children}</body>
+      <body>
+        <header></header>
+        <main>{children}</main>
+        <footer></footer>
+      </body>
     </html>
   );
 }

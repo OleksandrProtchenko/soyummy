@@ -3,9 +3,10 @@
 import css from "./Welcome.module.css";
 
 import { Button } from "../ui/Button/Button";
-import BackgroundImage from "./Background/Background";
+
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
+import BackgroundImage from "../ui/BgImage/BgImage";
 
 export default function Welcome() {
   const router = useRouter();
@@ -19,7 +20,12 @@ export default function Welcome() {
   };
   return (
     <div key={pathname} className={css.welcomeWrapper}>
-      <BackgroundImage />
+      <BackgroundImage
+        mobile="/welcomePage/welcomeMobile.jpg"
+        tablet="/welcomePage/welcomeTablet.jpg"
+        desktop="/welcomePage/welcomeDesktop.jpg"
+        alt="Welcome Image"
+      />
       <div className={`container ${css.welcomeContainer}`}>
         <div className={css.welcomeContent}>
           <div className={css.welcomeLogoWrapper}>
@@ -38,6 +44,7 @@ export default function Welcome() {
               style="screw"
               variant="primary"
               onClick={handleRegisterClick}
+              ariaLabel="Registration"
             />
             <Button
               type="button"
@@ -45,6 +52,7 @@ export default function Welcome() {
               style="screw"
               variant="empty"
               onClick={handleSignInClick}
+              ariaLabel="Sign In"
             />
           </div>
         </div>

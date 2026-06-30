@@ -1,3 +1,15 @@
+:root {
+  /* dark theme */
+  --font-poppins: "Poppins", sans-serif;
+  --main-green: #8baa36;
+  --main-text-color: #fafafa;
+  --main-dark-bg: #1e1f28;
+  --main-light-bg: #2a2c36;
+  --main-gray-color: #d9d9d9;
+
+  /* light theme */
+}
+
 html {
   height: 100%;
 }
@@ -20,13 +32,22 @@ body {
   min-height: 100vh;
   align-items: center;
   font-family: var(--font-poppins), sans-serif;
-  color: #fafafa;
+  color: var(--main-text-color);
   letter-spacing: -0.02em;
+}
+main {
+  flex: 1;
+  width: 100%;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  font-family: var(--font-poppins), sans-serif;
+  color: inherit;
 }
 
 .container {
